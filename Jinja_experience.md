@@ -1,3 +1,4 @@
+````jsx
 --- 
 {{ inventory_hostname }}
 {% if dump_cmd in dwdm_show.result  %}
@@ -23,3 +24,7 @@ ACCESS ERROR : {{ inventory_hostname }}
 {% endif %}
 {#  
 #}
+````
+In j2 template, how to change variable value. < Global, in Loop variable change , set $Var didn't work since it treats as new value inside loop >
+set _dummy = p.update( {'desc' :  line.split(':')[-1] })
+
